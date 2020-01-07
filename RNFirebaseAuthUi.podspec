@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author             = { "author" => "moonjava@gmail.com" }
   s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/moonjava2005/react-native-firebase-auth-ui.git", :tag => "master" }
-  s.source_files  = "RNFirebaseAuthUi/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc = true
 
 
