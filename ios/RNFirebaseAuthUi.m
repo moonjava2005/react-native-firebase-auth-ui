@@ -10,7 +10,6 @@ typedef NS_ENUM(NSInteger, RNFirebaseUiErrorCode) {
 {
   FUIPhoneAuth *phoneProvider;
   RCTResponseSenderBlock _successCallback;
-  RCTResponseSenderBlock _errorCallback;
 }
 - (dispatch_queue_t)methodQueue
 {
@@ -27,10 +26,7 @@ typedef NS_ENUM(NSInteger, RNFirebaseUiErrorCode) {
     NSInteger _errorCode=error.code;
     if(_errorCode==1)
     {
-      _errorCallback(@[@{
-                         @"code":@(1),
-                         @"message":@"User cancels"
-      }]);
+      
     }
   }
   else if(authDataResult!=nil)
@@ -52,10 +48,8 @@ typedef NS_ENUM(NSInteger, RNFirebaseUiErrorCode) {
 }
 
 RCT_EXPORT_MODULE()
-RCT_EXPORT_METHOD(signInWithPhoneNumber:(NSDictionary*) options withSuccessCallback:(RCTResponseSenderBlock)successBlock
-errorCallback:(RCTResponseSenderBlock)errorBlock) {
+RCT_EXPORT_METHOD(signInWithPhoneNumber:(NSDictionary*) options withSuccessCallback:(RCTResponseSenderBlock)successBlock) {
   _successCallback=successBlock;
-  _errorCallback=errorBlock;
   FUIAuth *fuiAuth=[FUIAuth defaultAuthUI];
   if(phoneProvider==nil)
   {
