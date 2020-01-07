@@ -72,7 +72,7 @@ allprojects {
 
 
 dependencies {
-    api 'com.firebaseui:firebase-ui-auth:6.1.0'
+    implementation 'com.firebaseui:firebase-ui-auth:6.1.0'
     api 'com.facebook.react:react-native:+'
 }
   

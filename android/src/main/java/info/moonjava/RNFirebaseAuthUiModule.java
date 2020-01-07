@@ -10,14 +10,18 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
+import com.firebase.ui.auth.AuthUI;
+import com.firebase.ui.auth.FirebaseUiException;
+import com.firebase.ui.auth.IdpResponse;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 
-public class RNFirebaseAuthUiModule extends ReactContextBaseJavaModule {
+public class RNFirebaseAuthUiModule extends ReactContextBaseJavaModule implements FirebaseCallbackListener {
 
     private static final String MODULE_NAME = "RNFirebaseAuthUi";
     private static ReactApplicationContext reactContext;
