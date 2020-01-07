@@ -1,5 +1,5 @@
 
-package info.moonjava;
+package info.moonjava.firebase.auth.ui;
 
 import android.app.Activity;
 import android.content.Intent;
