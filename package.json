@@ -1,16 +1,31 @@
 {
   "name": "react-native-firebase-auth-ui",
-  "version": "1.0.4",
+  "version": "1.0.11",
   "description": "React native Firebase Authentication with UI",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist",
+    "/ios",
+    "/android",
+    "/RNFirebaseAuthUi.podspec"
+  ],
   "scripts": {
+    "typescript": "tsc",
+    "build": "yarn typescript",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "MoonJava",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react-native": ">=0.62.0",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "typescript": "3.9.5"
+  },
   "peerDependencies": {
     "react-native": "^0.41.2"
   }

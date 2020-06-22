@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNFirebaseAuthUi"
-  s.version      = "1.0.0"
+  s.version      = "1.0.11"
   s.summary      = "RNFirebaseAuthUi"
   s.description  = "React native Firebase Authentication with UI"
   s.homepage     = "https://github.com/moonjava2005/react-native-firebase-auth-ui"

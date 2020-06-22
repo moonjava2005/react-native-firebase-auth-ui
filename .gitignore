@@ -10,3 +10,5 @@ android/.idea/
 android/react-native-firebase-auth-ui.iml
 
 .idea/
+
+node_modules/

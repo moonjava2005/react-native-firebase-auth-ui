@@ -1,24 +1,35 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": "src",
+    "declaration": true,
+    "module": "esnext",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
+    "sourceMap": true,
     "jsx": "react",
     "lib": [
-      "es6"
+      "es6",
+      "dom"
     ],
-    "outDir": "tsbuild",
+    "outDir": "./dist",
     "moduleResolution": "node",
-    "noEmit": true,
     "strict": true,
-    "target": "esnext"
+    "target": "es5",
+    "baseUrl": "src"
   },
+  "include": [
+    "src",
+    "ios",
+    "android"
+  ],
   "exclude": [
     "node_modules",
     "babel.config.js",
     "metro.config.js",
-    "jest.config.js"
+    "**/__tests__/*"
+  ],
+  "types": [
+    "jest"
   ]
 }
